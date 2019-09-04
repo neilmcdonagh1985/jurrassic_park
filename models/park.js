@@ -30,16 +30,16 @@ Park.prototype.findMostPopularDinosaur = function() {
     }
   }
 }
-//
-// Park.prototype.findAllOfOneSpecies = function(type) {
-//   const allTheSame = [];
-//   for (const dinosaur of this.collectionOfDinosaurs) {
-//     if (dinosaur.species === type) {
-//       allTheSame.push(dinosaur);
-//     }
-//   }
-//   return allTheSame
-// }
+
+Park.prototype.findAllOfOneSpecies = function(type) {
+  const allTheSame = [];
+  for (const dinosaur of this.collectionOfDinosaurs) {
+    if (dinosaur.species === type) {
+      allTheSame.push(dinosaur);
+    }
+  }
+  return allTheSame
+}
 
 Park.prototype.totalVisitorsPerDay = function() {
   let total = 0;

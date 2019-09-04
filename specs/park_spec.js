@@ -55,13 +55,13 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, dinosaur1)
   });
 
-  // it('should be able to find all dinosaurs of a particular species', function(species) {
-  //   park1.addDinosaurToCollection(dinosaur1)
-  //   park1.addDinosaurToCollection(dinosaur2)
-  //   park1.addDinosaurToCollection(dinosaur3)
-  //   park1.addDinosaurToCollection(dinosaur4)
-  //   assert.deepStrictEqual(park1.findAllOfOneSpecies('triceratops'), [dinosaur4])
-  // });
+  it('should be able to find all dinosaurs of a particular species', function() {
+    park1.addDinosaurToCollection(dinosaur1)
+    park1.addDinosaurToCollection(dinosaur2)
+    park1.addDinosaurToCollection(dinosaur3)
+    park1.addDinosaurToCollection(dinosaur4)
+    assert.deepStrictEqual(park1.findAllOfOneSpecies('triceratops'), [dinosaur4])
+  });
 
   it('should be able to calculate the total number of visitors per day', function () {
     park1.addDinosaurToCollection(dinosaur1)
