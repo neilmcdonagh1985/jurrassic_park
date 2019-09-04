@@ -30,7 +30,7 @@ Park.prototype.findMostPopularDinosaur = function() {
     }
   }
 }
-
+//
 // Park.prototype.findAllOfOneSpecies = function(type) {
 //   const allTheSame = [];
 //   for (const dinosaur of this.collectionOfDinosaurs) {
@@ -41,27 +41,29 @@ Park.prototype.findMostPopularDinosaur = function() {
 //   return allTheSame
 // }
 
+Park.prototype.totalVisitorsPerDay = function() {
+  let total = 0;
+  for (const dinosaur of this.collectionOfDinosaurs) {
+    total += dinosaur.guestsAttractedPerDay;
+  }
+  return total
+}
 
+Park.prototype.totalGuestsPerYear = function() {
+  let total = 0;
+  for (const dinosaur of this.collectionOfDinosaurs) {
+    total += dinosaur.guestsAttractedPerDay;
+  }
+  return total * 365
+}
 
+Park.prototype.revenuePerYear = function() {
+  return this.totalGuestsPerYear() * this.ticketPrice
+}
+
+// Park.protoype.removeOneSpecies = function(type) {
+//
+// }
 
 
 module.exports = Park;
-
-// Array.max = function( array ){
-//     return Math.max.apply( Math, array );
-// };
-
-
-
-// A name
-// A ticket price
-// A collection of dinosaurs
-// A park must be able to:
-//
-// Add a dinosaur to its collection of dinosaurs
-// Remove a dinosaur from its collection of dinosaurs
-// Find the dinosaur that attracts the most visitors
-// Find all dinosaurs of a particular species
-// Calculate the total number of visitors per day
-// Calculate the total number of visitors per year
-// Calculate the total revenue from ticket sales for one year

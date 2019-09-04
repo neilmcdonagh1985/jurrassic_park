@@ -60,14 +60,39 @@ describe('Park', function() {
   //   park1.addDinosaurToCollection(dinosaur2)
   //   park1.addDinosaurToCollection(dinosaur3)
   //   park1.addDinosaurToCollection(dinosaur4)
-  //   actual = park1.findAllOfOneSpecies('stegosaurus')
-  //   assert.deepStrictEqual(actual, [dinosaur3])
+  //   assert.deepStrictEqual(park1.findAllOfOneSpecies('triceratops'), [dinosaur4])
   // });
 
-  it('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day', function () {
+    park1.addDinosaurToCollection(dinosaur1)
+    park1.addDinosaurToCollection(dinosaur2)
+    park1.addDinosaurToCollection(dinosaur3)
+    assert.strictEqual(park1.totalVisitorsPerDay(), 500)
+  });
 
-  it('should be able to calculate the total number of visitors per year');
+  it('should be able to calculate the total number of visitors per year', function () {
+    park1.addDinosaurToCollection(dinosaur1)
+    park1.addDinosaurToCollection(dinosaur2)
+    park1.addDinosaurToCollection(dinosaur3)
+    park1.addDinosaurToCollection(dinosaur4)
+    assert.strictEqual(park1.totalGuestsPerYear(), 228125)
+  });
 
-  it('should be able to calculate total revenue for one year');
+  it('should be able to calculate total revenue for one year', function() {
+    park1.addDinosaurToCollection(dinosaur1)
+    park1.addDinosaurToCollection(dinosaur2)
+    park1.addDinosaurToCollection(dinosaur3)
+    park1.addDinosaurToCollection(dinosaur4)
+    assert.strictEqual(park1.revenuePerYear(), 2281250)
+  });
+
+  // it('should be able to remove all dinosaurs of a particular species',  function () {
+  //   park1.addDinosaurToCollection(dinosaur1)
+  //   park1.addDinosaurToCollection(dinosaur2)
+  //   park1.addDinosaurToCollection(dinosaur3)
+  //   park1.addDinosaurToCollection(dinosaur4)
+  //   actual = park1.removeOneSpecies('diplodocus')
+  //   assert.deepStrictEqual(actual, [dinosaur1, dinosaur3, dinosaur4])
+  // })
 
 });
